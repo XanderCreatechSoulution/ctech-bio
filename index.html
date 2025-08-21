@@ -1,61 +1,222 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CTECH.bio – Createch & Soulution</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CTECH.bio – Rollout • Hardware • Software • IT Support</title>
+  <meta name="description" content="CTECH.bio – Rollout, Hardware, Software, IT Support. Klar. Verlässlich. Menschlich."/>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config: sanftes Babyblau + Gold
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            baby: {
+              50: '#f3faff',
+              100:'#e6f4ff',
+              200:'#cfeaff',
+              300:'#b0dcff',
+              400:'#86c5ff',
+              500:'#58a9ff'
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-gradient-to-b from-gray-50 to-white text-gray-800 font-sans">
-  
-  <!-- Header -->
-  <header class="text-center py-12">
-    <h1 class="text-5xl font-bold text-amber-600 tracking-wide">CTECH.bio</h1>
-    <p class="mt-4 text-xl text-gray-600 italic">Createch & Soulution – Technik mit Herz und Verstand</p>
+<body class="bg-baby-50 text-slate-800 antialiased">
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <span class="inline-block h-3 w-3 rounded-full bg-amber-500"></span>
+        <span class="font-extrabold tracking-wide text-slate-900">CTECH.bio</span>
+      </a>
+      <nav class="hidden sm:flex gap-6 text-sm">
+        <a href="#leistungen" class="hover:text-amber-600">Leistungen</a>
+        <a href="#referenzen" class="hover:text-amber-600">Referenzen</a>
+        <a href="#kontakt" class="hover:text-amber-600">Kontakt</a>
+      </nav>
+      <a href="#kontakt" class="hidden sm:inline-block px-4 py-2 rounded-xl bg-amber-500 text-white font-medium hover:bg-amber-600 transition">
+        Jetzt anfragen
+      </a>
+    </div>
   </header>
 
-  <!-- Main Section -->
-  <main class="max-w-3xl mx-auto px-6">
-    <!-- About -->
-    <section class="my-12">
-      <h2 class="text-2xl font-semibold text-gray-700 mb-4">Über mich</h2>
-      <p class="text-lg leading-relaxed">
-        Ich bin Xander – IT-Experte, Visionär und Coach.  
-        Mit <span class="font-semibold text-amber-600">CTECH.bio</span> verbinde ich 
-        Technologie mit Menschlichkeit, Klarheit und Seele.  
-        Mein Ziel: IT-Lösungen, die nicht nur funktionieren, sondern auch 
-        <span class="italic">fühlbar Sinn ergeben</span>.
-      </p>
-    </section>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-baby-100 via-white to-baby-50"></div>
+    <div class="relative max-w-6xl mx-auto px-4 pt-16 pb-14">
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+            Rollout. Hardware. Software. <span class="text-amber-600">IT Support</span>.
+          </h1>
+          <p class="mt-4 text-lg text-slate-600">
+            Klar. Verlässlich. Menschlich. Ich helfe Unternehmen dabei,
+            Technik reibungslos auszurollen und zu betreiben – von IMAC/Rollout bis
+            Trouble-Shooting vor Ort.
+          </p>
+          <div class="mt-6 flex gap-3">
+            <a href="#leistungen" class="px-5 py-3 rounded-xl bg-amber-500 text-white font-semibold hover:-translate-y-0.5 hover:shadow-lg transition">
+              Leistungen ansehen
+            </a>
+            <a href="#kontakt" class="px-5 py-3 rounded-xl bg-white border border-slate-200 hover:border-amber-400 hover:text-amber-600 transition">
+              Kontakt
+            </a>
+          </div>
+          <div class="mt-6 flex items-center gap-4 text-sm text-slate-500">
+            <span class="inline-flex items-center gap-2">
+              <span class="h-2 w-2 bg-emerald-500 rounded-full"></span> Verfügbar ab sofort
+            </span>
+            <span>Standort: Rhein-Main • Remote & On-Site</span>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            class="rounded-3xl shadow-xl ring-1 ring-slate-200 hover:scale-[1.01] transition"
+            alt="IT Rollout"
+            src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop"
+          />
+          <div class="absolute -bottom-5 -left-5 h-20 w-20 rounded-3xl bg-amber-400 blur-2xl opacity-30"></div>
+          <div class="absolute -top-6 -right-6 h-24 w-24 rounded-3xl bg-baby-300 blur-2xl opacity-40"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Kontaktformular -->
-    <section class="my-12">
-      <h2 class="text-2xl font-semibold text-gray-700 mb-4">Kontakt</h2>
-      <p class="text-lg text-gray-600 mb-6">Schreib mir direkt über das Formular oder per Mail.</p>
-      
-      <form action="mailto:alexandertreise@createchsoulution.com" method="POST" enctype="text/plain" class="bg-white shadow-md rounded-2xl p-6">
-        <label class="block mb-4">
-          <span class="text-gray-700">Dein Name</span>
-          <input type="text" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
-        </label>
-        <label class="block mb-4">
-          <span class="text-gray-700">Deine E-Mail</span>
-          <input type="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
-        </label>
-        <label class="block mb-4">
-          <span class="text-gray-700">Nachricht</span>
-          <textarea name="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
-        </label>
-        <button type="submit" class="px-6 py-3 bg-amber-600 text-white rounded-xl shadow-lg hover:bg-amber-700 transition">
-          Nachricht senden
+  <!-- Leistungen -->
+  <section id="leistungen" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold">Leistungen</h2>
+    <p class="mt-2 text-slate-600">Praxisnah. Sauber dokumentiert. On-Site & Remote.</p>
+
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card -->
+      <article class="group rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition">
+        <div class="overflow-hidden">
+          <img class="h-40 w-full object-cover group-hover:scale-105 transition"
+               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop"
+               alt="Rollout & IMAC" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-amber-700">Rollout & IMAC</h3>
+          <p class="mt-2 text-sm text-slate-600">Planung, Imaging, Installation, Moves/Adds/Changes – Stückzahlen sauber durchziehen.</p>
+        </div>
+      </article>
+
+      <article class="group rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition">
+        <div class="overflow-hidden">
+          <img class="h-40 w-full object-cover group-hover:scale-105 transition"
+               src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1600&auto=format&fit=crop"
+               alt="Hardware Service" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-amber-700">Hardware Service</h3>
+          <p class="mt-2 text-sm text-slate-600">Clients, Peripherie, Netzwerke. Diagnose, Tausch, Inbetriebnahme, Dokumentation.</p>
+        </div>
+      </article>
+
+      <article class="group rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition">
+        <div class="overflow-hidden">
+          <img class="h-40 w-full object-cover group-hover:scale-105 transition"
+               src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop"
+               alt="Software & Support" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-amber-700">Software & Support</h3>
+          <p class="mt-2 text-sm text-slate-600">OS- & App-Rollouts, Tickets (SLA-Fokus), Remote-Assist, Schulungen.</p>
+        </div>
+      </article>
+
+      <article class="group rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition">
+        <div class="overflow-hidden">
+          <img class="h-40 w-full object-cover group-hover:scale-105 transition"
+               src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop"
+               alt="Dokumentation" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-amber-700">Dokumentation</h3>
+          <p class="mt-2 text-sm text-slate-600">Runbooks, Abnahmeprotokolle, Inventarpflege – damit alles nachvollziehbar bleibt.</p>
+        </div>
+      </article>
+
+      <article class="group rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition">
+        <div class="overflow-hidden">
+          <img class="h-40 w-full object-cover group-hover:scale-105 transition"
+               src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop"
+               alt="Sonderaufgaben" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-amber-700">Sonderaufgaben</h3>
+          <p class="mt-2 text-sm text-slate-600">VIP-Support, Floor-Walking, Cutover-Begleitung, kleine Automationen.</p>
+        </div>
+      </article>
+
+      <article class="group rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition">
+        <div class="overflow-hidden">
+          <img class="h-40 w-full object-cover group-hover:scale-105 transition"
+               src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop"
+               alt="Coaching" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-amber-700">Coaching & Klarheit</h3>
+          <p class="mt-2 text-sm text-slate-600">Kommunikation, Ruhe im Rollout, menschliche Führung am Kundenplatz.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Referenzen / Trust -->
+  <section id="referenzen" class="bg-white border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold">Warum CTECH.bio?</h2>
+      <ul class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+        <li class="p-5 rounded-2xl border border-slate-200 bg-baby-100/40">👁️‍🗨️ Saubere Kommunikation</li>
+        <li class="p-5 rounded-2xl border border-slate-200 bg-baby-100/40">🧭 Verlässlich & strukturiert</li>
+        <li class="p-5 rounded-2xl border border-slate-200 bg-baby-100/40">⚡ Schnelle Reaktionszeiten</li>
+        <li class="p-5 rounded-2xl border border-slate-200 bg-baby-100/40">📝 Dokumentation inklusive</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold">Kontakt</h2>
+    <p class="mt-2 text-slate-600">Für Anfragen zu Rollout, Hardware, Software & IT Support.</p>
+
+    <div class="mt-6 rounded-2xl bg-white border border-slate-200 p-6 flex flex-col md:flex-row items-start md:items-center gap-4">
+      <div>
+        <div class="text-sm text-slate-500">E-Mail</div>
+        <div id="email" class="text-lg font-semibold tracking-wide">kontakt@ctech.bio</div>
+      </div>
+      <div class="flex gap-3">
+        <a href="mailto:kontakt@ctech.bio"
+           class="px-4 py-2 rounded-xl bg-amber-500 text-white font-medium hover:bg-amber-600 transition">
+          Mail öffnen
+        </a>
+        <button onclick="copyMail()"
+                class="px-4 py-2 rounded-xl bg-white border border-slate-300 hover:border-amber-400 hover:text-amber-600 transition">
+          Adresse kopieren
         </button>
-      </form>
-    </section>
-  </main>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 text-gray-500 text-sm">
-    © 2025 CTECH.bio – Createch & Soulution | Alle Rechte vorbehalten
+  <footer class="text-center py-8 text-sm text-slate-500">
+    © 2025 CTECH.bio – Createch & Soulution
   </footer>
+
+  <script>
+    function copyMail() {
+      const email = document.getElementById('email').innerText.trim();
+      navigator.clipboard.writeText(email).then(() => {
+        alert('E-Mail kopiert: ' + email);
+      });
+    }
+  </script>
 </body>
 </html>
